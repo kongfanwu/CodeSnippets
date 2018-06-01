@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>fwSyncCall</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>let group = DispatchGroup()
+        let serialQueue = DispatchQueue(label: "com.xl.www")
+        group.enter()
+        serialQueue.async {
+            // 执行完调用group.leave()
+        }
+        group.enter()
+        serialQueue.async {
+            // 执行完调用group.leave()
+        }
+        group.notify(queue: serialQueue) {
+            DispatchQueue.global().async {
+                DispatchQueue.main.async {
+                    // 全部执行完毕
+                }
+            }
+        }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>F5F720E2-EA4D-4F31-9C67-EF9449AB284E</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Swift GCD异步执行完毕统一回调</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
