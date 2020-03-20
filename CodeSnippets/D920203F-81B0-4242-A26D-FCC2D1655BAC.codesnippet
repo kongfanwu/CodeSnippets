@@ -3,25 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>fwcccblock</string>
+	<string>xmhPlaceholderAndColorAndFont</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>/// 
-@property (nonatomic, copy) void (^&lt;#type#&gt;)();
-</string>
+	<string>xmhPlaceholderAndColorAndFont(@"", &lt;#color#&gt;, FONT_SIZE(&lt;##&gt;))</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>FCA680C0-552C-4D36-86F7-8BE98EE28C23</string>
+	<string>D920203F-81B0-4242-A26D-FCC2D1655BAC</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
-	<key>IDECodeSnippetPlatformFamily</key>
-	<string>iphoneos</string>
 	<key>IDECodeSnippetSummary</key>
-	<string></string>
+	<string>XMHUIKit-xmhPlaceholderAndColorAndFont</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>property block</string>
+	<string>XMHUIKit-xmhPlaceholderAndColorAndFont</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

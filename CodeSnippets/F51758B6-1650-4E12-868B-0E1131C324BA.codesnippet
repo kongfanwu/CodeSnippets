@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>fwNetwork</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>var param = [String : String]()
+        param["fram_id"] = String(ShareWorkInstance.share()!.fram_id)
+         // 获取疗程项目数据
+        XMHProgressHUD.showGifImage()
+        YQNetworking.post(withUrl: XMHHostUrlManager.url(kALLOCATION_STATISTICS_GET_TABLE_URL), refreshRequest: false, cache: false, params: param, progressBlock: nil) { (obj: BaseModel?, isSuccess: Bool, error: Error?) in
+            if isSuccess { XMHProgressHUD.dismiss() }
+            else { return }
+            
+            let json = JSON(obj?.data as Any)
+            self.tagMdoelList = [XMHTagModel].deserialize(from: json["list4"].rawValue as? Array)! as! [XMHTagModel]
+          
+        }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>F51758B6-1650-4E12-868B-0E1131C324BA</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Swift</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

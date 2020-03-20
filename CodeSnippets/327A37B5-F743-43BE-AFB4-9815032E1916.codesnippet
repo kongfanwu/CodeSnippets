@@ -11,22 +11,40 @@
 	<key>IDECodeSnippetContents</key>
 	<string>// MARK - UITableViewDataSource
 public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -&gt; Int {
-        return dataArray.count
-    }
+    return dataArray.count
+}
+
+public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -&gt; UITableViewCell{
+    let cell = tableView.dequeueReusableCell(withIdentifier: "XLManagerCell") as! XLManagerCell
+    cell.textLabel?.text = "row:\(indexPath.row)"
+    return cell
+}
+
+func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -&gt; UIView? {
+    let height = self.tableView(tableView, heightForHeaderInSection: section)
+    let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.W, height: height))
+    return headerView
+}
+
+func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -&gt; CGFloat {
+    return 0
+}
+
+func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -&gt; UIView? {
+    let height = self.tableView(tableView, heightForFooterInSection: section)
+    let footerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.W, height: height))
+    return footerView
+}
+
+func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -&gt; UITableViewCell{
-        let cell = tableView.dequeueReusableCell(withIdentifier: "XLManagerCell") as! XLManagerCell
-        cell.textLabel?.text = "row:\(indexPath.row)"
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    }</string>
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>327A37B5-F743-43BE-AFB4-9815032E1916</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
 	<string>Swift TableView delegate</string>
 	<key>IDECodeSnippetUserSnippet</key>

@@ -3,25 +3,25 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>fwcccblock</string>
+	<string>xmhCreateTableView</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>/// 
-@property (nonatomic, copy) void (^&lt;#type#&gt;)();
-</string>
+	<string>self.tableView = UITableView
+    .xmhNewAndSuperViewAndFrameAndStyleAndDelegate(self.view, CGRectMake(0, 0, self.view.width, self.view.height), UITableViewStylePlain, self)
+    .xmhMakeConstraints(^(MASConstraintMaker * make){
+        make.&lt;##&gt;
+    });</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>FCA680C0-552C-4D36-86F7-8BE98EE28C23</string>
+	<string>B1408CC5-AD78-4F9D-8313-0B88AEEA733B</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
-	<key>IDECodeSnippetPlatformFamily</key>
-	<string>iphoneos</string>
 	<key>IDECodeSnippetSummary</key>
-	<string></string>
+	<string>XMHUIKit-xmhCreateTableView</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>property block</string>
+	<string>XMHUIKit-xmhCreateTableView</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

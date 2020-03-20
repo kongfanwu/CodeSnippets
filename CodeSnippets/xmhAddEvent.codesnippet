@@ -3,25 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>fwcccblock</string>
+	<string>xmhAddEvent</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>/// 
-@property (nonatomic, copy) void (^&lt;#type#&gt;)();
-</string>
+	<string>xmhAddEvent(UIControlEventTouchUpInside, ^(UIButton *sender){
+
+})</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>FCA680C0-552C-4D36-86F7-8BE98EE28C23</string>
+	<string>0A1EC562-C0E8-4776-A1E3-4F0A737C15E9</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
-	<key>IDECodeSnippetPlatformFamily</key>
-	<string>iphoneos</string>
 	<key>IDECodeSnippetSummary</key>
-	<string></string>
+	<string>XMHUIKit-xmhAddEvent</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>property block</string>
+	<string>XMHUIKit-xmhAddEvent</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

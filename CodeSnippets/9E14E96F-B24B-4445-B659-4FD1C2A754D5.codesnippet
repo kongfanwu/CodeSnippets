@@ -3,25 +3,33 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>fwcccblock</string>
+	<string>fw_defer</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>/// 
-@property (nonatomic, copy) void (^&lt;#type#&gt;)();
-</string>
+	<string>/*
+ 函数执行完最后执行。 与swift defer 函数一样。
+ 示例：
+ OnBlockExit(block_1) {
+    NSLog(@"OnBlockExit 1");
+ };
+ */
+#ifdef __GNUC__
+__unused static void cleanUpBlock(__strong void(^*block)(void)) {
+    (*block)();
+}
+#define OnBlockExit(block_name) __strong void(^block_name)(void) __attribute__((cleanup(cleanUpBlock), unused)) = ^
+#endif</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>FCA680C0-552C-4D36-86F7-8BE98EE28C23</string>
+	<string>9E14E96F-B24B-4445-B659-4FD1C2A754D5</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C</string>
-	<key>IDECodeSnippetPlatformFamily</key>
-	<string>iphoneos</string>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetSummary</key>
-	<string></string>
+	<string>fw_defer</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>property block</string>
+	<string>fw_defer</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

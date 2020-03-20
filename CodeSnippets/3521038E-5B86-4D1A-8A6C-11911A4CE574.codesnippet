@@ -3,25 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>fwcccblock</string>
+	<string>xmhDelegate</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>/// 
-@property (nonatomic, copy) void (^&lt;#type#&gt;)();
-</string>
+	<string>xmhDelegate(self)</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>FCA680C0-552C-4D36-86F7-8BE98EE28C23</string>
+	<string>3521038E-5B86-4D1A-8A6C-11911A4CE574</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
-	<key>IDECodeSnippetPlatformFamily</key>
-	<string>iphoneos</string>
 	<key>IDECodeSnippetSummary</key>
-	<string></string>
+	<string>XMHUIKit-xmhDelegate</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>property block</string>
+	<string>XMHUIKit-xmhDelegate</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

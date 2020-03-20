@@ -3,25 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>fwcccblock</string>
+	<string>fwHudAlert</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>/// 
-@property (nonatomic, copy) void (^&lt;#type#&gt;)();
-</string>
+	<string>[MzzHud toastWithTitle:@"提示" message:@""];</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>FCA680C0-552C-4D36-86F7-8BE98EE28C23</string>
+	<string>8F300249-E7B1-4C89-AB31-3826CCBCD45E</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C</string>
-	<key>IDECodeSnippetPlatformFamily</key>
-	<string>iphoneos</string>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetSummary</key>
-	<string></string>
+	<string>fwHudAlert</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>property block</string>
+	<string>Alert提示</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

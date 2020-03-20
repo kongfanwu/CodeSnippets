@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>fwCreateButton</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>__weak typeof(self) _self = self;
+&lt;##&gt; = UIButton
+.xmhNewAndSuperView(&lt;##&gt;)
+.xmhSetTitleAndState(@"&lt;##&gt;", UIControlStateNormal)
+.xmhSetTitlColorAndState(&lt;#color#&gt;, UIControlStateNormal)
+.xmhTitleLabel(^(UILabel *titleLabel){
+    titleLabel.xmhFont(FONT_SIZE(&lt;##&gt;));
+})
+.xmhSetImageAndState([UIImage imageNamed:@"&lt;##&gt;"], UIControlStateNormal)
+.xmhMakeConstraints(^(MASConstraintMaker * make){
+    make.&lt;##&gt;
+})
+.xmhAddEvent(UIControlEventTouchUpInside, ^(UIButton *sender){
+    __strong typeof(_self) self = _self;
+    &lt;##&gt;
+});</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>1FA16B28-FDF9-4E7D-A787-3705B6F8AB57</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>XMHUIKit-fwCreateButton</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>XMHUIKit-fwCreateButton</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

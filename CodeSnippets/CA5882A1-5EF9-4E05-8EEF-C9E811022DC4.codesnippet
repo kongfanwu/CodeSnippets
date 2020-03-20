@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>fwqueueMain</string>
+	<string>fwdispatchMain</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeBlock</string>
@@ -16,6 +16,8 @@
 	<string>CA5882A1-5EF9-4E05-8EEF-C9E811022DC4</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
 	<string>获取主线程</string>
 	<key>IDECodeSnippetUserSnippet</key>

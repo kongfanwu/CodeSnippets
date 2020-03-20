@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>fwNetwork</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>-(void)getData {
+    NSString *framId = @([ShareWorkInstance shareInstance].share_join_code.fram_id).stringValue;
+    
+    NSMutableDictionary *params = NSMutableDictionary.new;
+    params[@"fram_id"] = framId;
+    params[@"join_code"] = [ShareWorkInstance shareInstance].join_code;
+    params[@"store_code"] = [ShareWorkInstance shareInstance].share_join_code.store_code;
+    params[@"page"] = @(_page);
+    params[@"sort"] = @(_sort);
+    params[@"date"] = @[@{@"start_time": @(1553897600),
+        @"end_time": @(1563897600)
+    }];
+    
+    [XMHProgressHUD showGifImage];
+    [YQNetworking postWithUrl:[XMHHostUrlManager url:kORDER_Manager_ABNORMAL_ORDERS_LIST_URL] refreshRequest:YES cache:NO params:params progressBlock:nil resultBlock:^(BaseModel *obj, BOOL isSuccess, NSError *error) {
+        [_tableView.mj_header endRefreshing];
+        [_tableView.mj_footer endRefreshing];
+        if (!isSuccess) return;
+        [XMHProgressHUD dismiss];
+        NSArray *modelArray = [NSArray yy_modelArrayWithClass:[XMHShopModel class] json:obj.data[@"list"]];
+        _tableView.mj_footer.hidden = !modelArray.count;
+        if (_page == 1) {
+            self.dataArray = [modelArray mutableCopy];
+        } else {
+            [self.dataArray addObjectsFromArray:modelArray];
+        }
+        [_tableView reloadData];
+    }];
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>D6CA1339-7EC8-4ABE-9BDF-F2BE60AA3333</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>OC</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>OC</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

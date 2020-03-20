@@ -9,11 +9,13 @@
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>// MARK: -</string>
+	<string>// MARK: - </string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>CEE6B2C9-79D8-4F75-9949-B326C2FCFF7E</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
 	<string>Swift MARK</string>
 	<key>IDECodeSnippetUserSnippet</key>

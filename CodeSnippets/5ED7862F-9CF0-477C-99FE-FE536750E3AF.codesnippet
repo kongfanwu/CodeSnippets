@@ -3,30 +3,26 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>fwGCDGroutNotify</string>
+	<string>fwCellHeight</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>dispatch_group_t group = dispatch_group_create();
-
-dispatch_group_enter(group);
-dispatch_group_async(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-    dispatch_group_leave(group);
-});
-
-dispatch_group_notify(group, dispatch_get_main_queue(), ^{
-    
-    });</string>
+	<string>//高度缓存
+    CGFloat height = [cell systemLayoutSizeFittingSize:CGSizeMake(tableView.frame.size.width, 0)
+                         withHorizontalFittingPriority:UILayoutPriorityRequired
+                               verticalFittingPriority:UILayoutPriorityFittingSizeLevel].height;
+// 与上方法计算差0.333高度
+// [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize]</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>91656F63-361E-489C-B132-40944974E7A7</string>
+	<string>5ED7862F-9CF0-477C-99FE-FE536750E3AF</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>fwGCDGroutNotify</string>
+	<string>fwCellHeight</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>OC网络请求统一回调</string>
+	<string>cell高度缓存</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

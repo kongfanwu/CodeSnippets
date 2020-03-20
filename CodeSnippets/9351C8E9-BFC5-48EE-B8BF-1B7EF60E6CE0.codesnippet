@@ -3,30 +3,32 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>fwGCDGroutNotify</string>
+	<string>fwCreateMjRefresh</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>dispatch_group_t group = dispatch_group_create();
-
-dispatch_group_enter(group);
-dispatch_group_async(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-    dispatch_group_leave(group);
-});
-
-dispatch_group_notify(group, dispatch_get_main_queue(), ^{
-    
-    });</string>
+	<string>__weak typeof(self) _self = self;
+_tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        __strong typeof(_self) self = _self;
+        self.page = 1;
+        [self getManagerList];
+    }];
+    _tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        __strong typeof(_self) self = _self;
+        self.page++;
+        [self getManagerList];
+    }];
+    [_tableView.mj_header beginRefreshing];</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>91656F63-361E-489C-B132-40944974E7A7</string>
+	<string>9351C8E9-BFC5-48EE-B8BF-1B7EF60E6CE0</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>fwGCDGroutNotify</string>
+	<string>创建上下刷新控件</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>OC网络请求统一回调</string>
+	<string>创建上下刷新控件</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

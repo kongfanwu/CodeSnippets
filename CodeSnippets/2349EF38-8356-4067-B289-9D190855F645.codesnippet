@@ -3,25 +3,32 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>fwcccblock</string>
+	<string>fwYYModelProtocol</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>/// 
-@property (nonatomic, copy) void (^&lt;#type#&gt;)();
-</string>
+	<string>+ (NSDictionary *)modelCustomPropertyMapper {
+    return @{@"name"  : @"n",
+             @"page"  : @"p",
+             @"desc"  : @"ext.desc",
+             @"bookID": @[@"id", @"ID", @"book_id"]};
+}
+
++ (NSDictionary *)modelContainerPropertyGenericClass {
+    return @{@"shadows" : [YYShadow class],
+             @"borders" : YYBorder.class,
+             @"attachments" : @"YYAttachment" };
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>FCA680C0-552C-4D36-86F7-8BE98EE28C23</string>
+	<string>2349EF38-8356-4067-B289-9D190855F645</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
-	<key>IDECodeSnippetPlatformFamily</key>
-	<string>iphoneos</string>
 	<key>IDECodeSnippetSummary</key>
-	<string></string>
+	<string>fwYYModelProtocol</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>property block</string>
+	<string>fwYYModelProtocol</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

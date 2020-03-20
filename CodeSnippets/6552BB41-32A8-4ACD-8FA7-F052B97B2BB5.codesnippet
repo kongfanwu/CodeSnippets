@@ -3,30 +3,28 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>fwGCDGroutNotify</string>
+	<string>fwcollectionCreate</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>dispatch_group_t group = dispatch_group_create();
-
-dispatch_group_enter(group);
-dispatch_group_async(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-    dispatch_group_leave(group);
-});
-
-dispatch_group_notify(group, dispatch_get_main_queue(), ^{
-    
-    });</string>
+	<string> UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
+    _collectionView.delegate = self;
+    _collectionView.dataSource = self;
+    [self.view addSubview:_collectionView];
+    [_collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>91656F63-361E-489C-B132-40944974E7A7</string>
+	<string>6552BB41-32A8-4ACD-8FA7-F052B97B2BB5</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>fwGCDGroutNotify</string>
+	<string>fwcollectionCreate</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>OC网络请求统一回调</string>
+	<string>fwcollectionCreate</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

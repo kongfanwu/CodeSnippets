@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>fwsavelog</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>+ (void)cacheData:(NSString *)data {
+    
+    if (data) {
+        data = [NSString stringWithFormat:@"\n%@\n", data];
+    }
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    //创建document路径
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    NSString *filePath = [NSString stringWithFormat:@"%@/videoLog.text",path];
+    //查找文件，如果没有就创建一个文件
+    if (![fileManager fileExistsAtPath: filePath]) {
+        BOOL isSuccess = [fileManager createFileAtPath:filePath contents:nil attributes:nil];
+        NSLog(@"isSiccess = %d",isSuccess);
+    }
+    NSFileHandle *fielHandle = [NSFileHandle fileHandleForUpdatingAtPath:filePath];
+    [fielHandle seekToEndOfFile];  //将节点跳到文件的末尾
+    NSData* stringData  = [data  dataUsingEncoding:NSUTF8StringEncoding];
+    [fielHandle writeData:stringData]; //追加写入数据
+    [fielHandle closeFile];
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>9070572A-CFA1-403F-8892-B91F388ACFA2</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>fwsavelog</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>存储log</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

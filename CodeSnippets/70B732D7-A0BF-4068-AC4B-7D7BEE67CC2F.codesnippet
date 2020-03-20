@@ -2,26 +2,24 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>fwcccblock</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>/// 
-@property (nonatomic, copy) void (^&lt;#type#&gt;)();
-</string>
+	<string>- (void)test:(BOOL(^)(NSString * a))block {
+    NSLog(@"test");
+    BOOL m = block(@"123");
+    NSLog(@"m:%ld", m);
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>FCA680C0-552C-4D36-86F7-8BE98EE28C23</string>
+	<string>70B732D7-A0BF-4068-AC4B-7D7BEE67CC2F</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C</string>
-	<key>IDECodeSnippetPlatformFamily</key>
-	<string>iphoneos</string>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetSummary</key>
-	<string></string>
+	<string>fwMethondParamBlock</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>property block</string>
+	<string>方法，参数block,带返回值</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

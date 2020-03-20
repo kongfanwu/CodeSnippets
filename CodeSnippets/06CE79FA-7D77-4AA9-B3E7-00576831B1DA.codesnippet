@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>fwParamMutable</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>-(void)createRightBarButtonComplete:(BarButtonComplete)complete
+                              items:(id)items,... __attribute__((sentinel))
+{
+    NSMutableArray *argsArray = [[NSMutableArray alloc] init];
+    if(items) {
+        [argsArray addObject:items];
+        
+        va_list params;//定义一个指向个数可变的参数列表指针
+        va_start(params,items);//va_start  得到第一个可变参数地址
+        NSString *arg;
+        while((arg = va_arg(params, NSString *)))//va_arg 指向下一个参数地址
+        {
+            if(arg) {
+                [argsArray addObject:arg];
+            }
+        }
+        va_end(params); //置空
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>06CE79FA-7D77-4AA9-B3E7-00576831B1DA</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>可变参数</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>可变参数</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

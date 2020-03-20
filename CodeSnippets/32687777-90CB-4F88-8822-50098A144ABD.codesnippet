@@ -3,30 +3,25 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>fwGCDGroutNotify</string>
+	<string>fwalert</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>dispatch_group_t group = dispatch_group_create();
-
-dispatch_group_enter(group);
-dispatch_group_async(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-    dispatch_group_leave(group);
-});
-
-dispatch_group_notify(group, dispatch_get_main_queue(), ^{
-    
-    });</string>
+	<string>UIAlertController *al = [UIAlertController alertControllerWithTitle:nil message:@"定位服务未打开，请到设置-隐私-定位服务里打开！" preferredStyle:UIAlertControllerStyleAlert];
+        [al addAction:[UIAlertAction actionWithTitle:@"确定" style:0 handler:^(UIAlertAction * _Nonnull action) {
+            exit(0);
+        }]];
+        [ApplicationDelegate.window.rootViewController presentViewController:al animated:YES completion:nil];</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>91656F63-361E-489C-B132-40944974E7A7</string>
+	<string>32687777-90CB-4F88-8822-50098A144ABD</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>fwGCDGroutNotify</string>
+	<string>fwalert</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>OC网络请求统一回调</string>
+	<string>fwalert</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

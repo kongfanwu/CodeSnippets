@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>fwButtonTitleImage</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>CGFloat btnBgW = SCREEN_WIDTH / 2;
+    self.statusBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.statusBtn setTitle:@"全部  " forState:UIControlStateNormal];
+    [self.statusBtn setTitleColor:kColor6 forState:UIControlStateNormal];
+    [self.statusBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+    self.statusBtn.titleLabel.font = [UIFont systemFontOfSize:14];
+    self.statusBtn.tag = 2;
+    [self.statusBtn setImage:[UIImage imageNamed:@"huodongzhongxin_youjiantou"] forState:UIControlStateNormal];
+    self.statusBtn.semanticContentAttribute = UISemanticContentAttributeForceRightToLeft; // 左右翻转
+    self.statusBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight; // 内容靠右
+    self.statusBtn.titleLabel.textAlignment = NSTextAlignmentLeft; // 靠左，以显示label后边的空格间距
+    self.statusBtn.titleLabel.adjustsFontSizeToFitWidth = YES;
+    [bgView addSubview:self.statusBtn];
+    [self.statusBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.mas_equalTo(btnBgW * 0.5);
+        make.right.mas_equalTo(-15);
+        make.top.bottom.mas_equalTo(bgView);
+    }];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>7CC08436-EF21-4B16-8ED4-80A36ABE7BA4</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>fwButtonTitleImage</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>button 文字图片位置</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

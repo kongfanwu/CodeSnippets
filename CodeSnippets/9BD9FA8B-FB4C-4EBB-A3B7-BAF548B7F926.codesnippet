@@ -3,25 +3,22 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>fwcccblock</string>
+	<string>fwbuttonEdge</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>/// 
-@property (nonatomic, copy) void (^&lt;#type#&gt;)();
-</string>
+	<string>[_categorySearchBtn setTitleEdgeInsets:UIEdgeInsetsMake(_categorySearchBtn.imageView.frame.size.height, -_categorySearchBtn.imageView.frame.size.width, 0.0,0.0)];
+        [_categorySearchBtn setImageEdgeInsets:UIEdgeInsetsMake(-_categorySearchBtn.titleLabel.frame.size.height, 0.0, 0.0, -_categorySearchBtn.titleLabel.bounds.size.width)];</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>FCA680C0-552C-4D36-86F7-8BE98EE28C23</string>
+	<string>9BD9FA8B-FB4C-4EBB-A3B7-BAF548B7F926</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C</string>
-	<key>IDECodeSnippetPlatformFamily</key>
-	<string>iphoneos</string>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetSummary</key>
-	<string></string>
+	<string>fwbuttonEdge</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>property block</string>
+	<string>butotn edge</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
